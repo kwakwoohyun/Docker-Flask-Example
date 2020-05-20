@@ -1,0 +1,7 @@
+FROM python:3.7
+COPY . /app
+WORKDIR /app
+ENV GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_APPLICATION_CREDENTIALS
+RUN pip install -r requirements.txt
+ENTRYPOINT ["python"]
+CMD ["app.py"]
